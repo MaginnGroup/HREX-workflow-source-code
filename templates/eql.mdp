@@ -1,0 +1,55 @@
+; Comments added 2021 Jul 14
+; Ryan DeFever
+; Maginn Research Group
+; University of Notre Dame
+
+integrator               = sd        ; Langevin dynamics integrator
+dt                       = 0.001     ; 1 fs timestep
+nsteps                   = 250000    ; 250 ps equilibration
+
+nstenergy                = 5000       ; frequency (n_steps) to output energies to .edr file
+nstlog                   = 5000      ; frequency (n_steps) to output data to .log file
+nstxout-compressed       = 50000     ; frequency to output compressed (.xtc) coordinates
+
+cutoff-scheme            = Verlet    ; Verlet neighbor list
+verlet-buffer-tolerance  = 1e-4      ; Choose neighbor list cutoff/update to achieve this energy tolerance
+
+coulombtype              = PME       ; Use particle mesh Ewald
+rcoulomb                 = 1.2       ; Coulomb short range cutoff
+
+vdwtype                  = Cut-off   ; VDW type; by default uses potential shift
+rvdw                     = 1.2       ; VDW cutoff distance
+DispCorr                 = EnerPres  ; Apply analytical dispersion corrections to energy/pressure
+
+tc-grps                  = System    ; Apply temperature coupling to whole system
+tau-t                    = 1.0       ; time constant for temperature coupling (ps)
+ref-t                    = 298.15    ; temperature
+
+pcoupl                   = Berendsen ; Use Berendsen pressure coupling (EARLY equilibration)
+tau_p                    = 2.0       ; time constant for pressure coupling (ps)
+compressibility          = 4.5e-5    ; compressibility of water (1/bar)
+ref_p                    = 1.0       ; reference pressure, 1 bar
+
+free-energy              = yes       ; free energy calculation
+init-lambda-state        = 20        ; run equilibration in lambda-window 20; HFC-32 mostly OFF
+calc-lambda-neighbors    = -1        ; calc energy diffs between all lambda-windows
+
+; Define the vdw-lambdas - 0.0 = fully interacting, 1.0=non-interacting
+vdw-lambdas              = 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.10 0.20 0.30 0.40 0.45 0.50 0.55 0.60 0.65 0.70 0.80 0.90 0.95 1.00
+; Define the coul-lambdas - 0.0 = fully interacting, 1.0=non-interacting
+coul-lambdas             = 0.00 0.05 0.10 0.15 0.20 0.30 0.40 0.60 0.80 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00
+
+couple-moltype           = R32AL     ; the moleculetype R32AL is coupled with lambda
+couple-lambda0           = vdw-q     ; vdw and q are FULLY coupled at lambda=0
+couple-lambda1           = none      ; things are FULLY UNCOUPLED at lambda=1
+
+; When couple-intramol = no, intramolecular non-bonded interactions are replaced
+; by exclusions and explicit pair interactions. In this manner the decoupled state
+; of the molecule corresponds to the proper vacuum state without periodicity effects.
+couple-intramol          = no
+
+nstdhdl                  = 1000       ; output frequency for energy diffs
+sc-alpha                 = 0.5       ; sc-* options related to soft-core LJ potential
+sc-coul                  = no
+sc-power                 = 1
+sc-sigma                 = 0.3

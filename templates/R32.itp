@@ -1,0 +1,65 @@
+; GROMACS topology file
+; Written by maffa_to_gmx.py on 2021-10-07 15:27:10.974489
+
+
+[ moleculetype ]
+; molname    nrexcl
+R32          3
+
+
+[ atoms ]
+; atnr       atype   resnr resnm atname chgrp    charge    mass
+      1          C    1   R32     C1    1     0.40546700     12.0110
+      2          F    1   R32     F1    2    -0.25078300     18.9980
+      3          H    1   R32     H1    3     0.04804950      1.0080
+      4          F    1   R32     F2    4    -0.25078300     18.9980
+      5          H    1   R32     H2    5     0.04804950      1.0080
+
+
+[ bonds ]
+; idx1   idx2   funct   b0     kb
+       1     2    1     0.13497     298653.950
+       1     3    1     0.10961     277566.579
+       1     4    1     0.13497     298653.950
+       1     5    1     0.10961     277566.579
+
+
+[ angles ]
+; idx1   idx2    idx3  funct   theta0     k_theta
+       2     1     3    1     108.790        427.605
+       2     1     4    1     107.360        593.291
+       2     1     5    1     108.790        427.605
+       4     1     3    1     108.790        427.605
+       3     1     5    1     110.200        326.352
+       4     1     5    1     108.790        427.605
+
+[ moleculetype ]
+; molname    nrexcl
+R32AL          3
+
+
+[ atoms ]
+; atnr       atype   resnr resnm atname chgrp    charge    mass
+      1          C    1   RAL     C1    1     0.40546700     12.0110
+      2          F    1   RAL     F1    2    -0.25078300     18.9980
+      3          H    1   RAL     H1    3     0.04804950      1.0080
+      4          F    1   RAL     F2    4    -0.25078300     18.9980
+      5          H    1   RAL     H2    5     0.04804950      1.0080
+
+
+[ bonds ]
+; idx1   idx2   funct   b0     kb
+       1     2    1     0.13497     298653.950
+       1     3    1     0.10961     277566.579
+       1     4    1     0.13497     298653.950
+       1     5    1     0.10961     277566.579
+
+
+[ angles ]
+; idx1   idx2    idx3  funct   theta0     k_theta
+       2     1     3    1     108.790        427.605
+       2     1     4    1     107.360        593.291
+       2     1     5    1     108.790        427.605
+       4     1     3    1     108.790        427.605
+       3     1     5    1     110.200        326.352
+       4     1     5    1     108.790        427.605

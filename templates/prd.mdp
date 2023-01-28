@@ -1,0 +1,57 @@
+; Comments added 2021 Jul 14
+; Ryan DeFever
+; Maginn Research Group
+; University of Notre Dame
+
+; See eql.mdp for comments explaining each option
+; Key difference here is that we have switched
+; to a (better) Parrinello-Rahman barostat and
+; run for 50 ns
+
+; NOTE: the init-lambda-state is now a string MYLAMBDA
+; that will be replaced via sed before the simulation
+
+
+
+integrator               = sd
+dt                       = 0.001     ; 1 fs
+nsteps                   = 50000000  ; 50.0 ns
+
+nstenergy                = 500
+nstlog                   = 50000
+nstxout-compressed       = 10000000
+
+cutoff-scheme            = Verlet
+verlet-buffer-tolerance  = 1e-4
+
+coulombtype              = PME
+rcoulomb                 = 1.2
+
+vdwtype                  = Cut-off
+rvdw                     = 1.2
+DispCorr                 = EnerPres
+
+tc-grps                  = System
+tau-t                    = 1.0
+ref-t                    = 298.15
+
+pcoupl                   = Parrinello-Rahman
+tau_p                    = 2.0
+compressibility          = 4.5e-5
+ref_p                    = 1.0
+nstpcouple               = 1
+
+free-energy              = yes
+init-lambda-state        = MYLAMBDA
+calc-lambda-neighbors    = -1
+vdw-lambdas              = 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.10 0.20 0.30 0.40 0.45 0.50 0.55 0.60 0.65 0.70 0.80 0.90 0.95 1.00
+coul-lambdas             = 0.00 0.05 0.10 0.15 0.20 0.30 0.40 0.60 0.80 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00
+couple-moltype           = R32AL
+couple-lambda0           = vdw-q
+couple-lambda1           = none
+couple-intramol          = no
+nstdhdl                  = 100
+sc-alpha                 = 0.5
+sc-coul                  = no
+sc-power                 = 1
+sc-sigma                 = 0.3
