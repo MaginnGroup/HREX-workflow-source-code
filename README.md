@@ -1,6 +1,5 @@
 # HREX-Scripts
  Example files for Gromacs and scripts of "Alchemical Free Energy and Hamiltonian Replica Exchange Molecular Dynamics to Compute Hydrofluorocarbon Isotherms in Imidazolium-Based Ionic Liquids"
- Implementation:
  1. In templates/ folder, prepare mol.gro and mol.itp
     Run "source build_systems.sh" to get conf_nxxxx.gro and topol_nxxxx.top
  2. In main folder, run "source _setup-eq.sh" to perform equilibration 
