@@ -1,0 +1,256 @@
+!*******************************************************************************
+!Molecular connectivity file for bmim.pdb
+!*******************************************************************************
+!Atom Format
+!index type element mass charge vdw_type parameters
+!vdw_type="LJ", parms=epsilon sigma
+!vdw_type="Mie", parms=epsilon sigma repulsion_exponent dispersion_exponent
+
+# Atom_Info
+25
+1    cc_s1    C    12.011    -0.116    LJ    43.277    3.400    ring
+2    na_s1    N    14.007    0.229    LJ    85.547    3.250    ring
+3    cd_s1    C    12.011    -0.178    LJ    43.277    3.400    ring
+4    cc_s1    C    12.011    -0.171    LJ    43.277    3.400    ring
+5    na_s1    N    14.007    0.121    LJ    85.547    3.250    ring
+6    h4_s1    H    1.008    0.213    LJ    7.548    2.511
+7    h5_s1    H    1.008    0.204    LJ    7.548    2.421
+8    h4_s1    H    1.008    0.226    LJ    7.548    2.511
+9    c3_s1    C    12.011    -0.341    LJ    55.052    3.400
+10    h1_s1    H    1.008    0.162    LJ    7.901    2.471
+11    h1_s1    H    1.008    0.162    LJ    7.901    2.471
+12    h1_s1    H    1.008    0.162    LJ    7.901    2.471
+13    c3_s1    C    12.011    -0.092    LJ    55.052    3.400
+14    h1_s1    H    1.008    0.097    LJ    7.901    2.471
+15    h1_s1    H    1.008    0.097    LJ    7.901    2.471
+16    c3_s1    C    12.011    -0.133    LJ    55.052    3.400
+17    hc_s1    H    1.008    0.063    LJ    7.901    2.650
+18    hc_s1    H    1.008    0.063    LJ    7.901    2.650
+19    c3_s1    C    12.011    0.110    LJ    55.052    3.400
+20    hc_s1    H    1.008    0.016    LJ    7.901    2.650
+21    hc_s1    H    1.008    0.016    LJ    7.901    2.650
+22    c3_s1    C    12.011    -0.166    LJ    55.052    3.400
+23    hc_s1    H    1.008    0.052    LJ    7.901    2.650
+24    hc_s1    H    1.008    0.052    LJ    7.901    2.650
+25    hc_s1    H    1.008    0.052    LJ    7.901    2.650
+
+!Bond Format
+!index i j type parameters
+!type="fixed", parms=bondLength
+
+# Bond_Info
+25
+1     1     2     fixed     1.371
+2     1     5     fixed     1.371
+3     1     7     fixed     1.079
+4     2     3     fixed     1.371
+5     2     9     fixed     1.456
+6     3     6     fixed     1.083
+7     3     4     fixed     1.371
+8     4     5     fixed     1.371
+9     4     8     fixed     1.083
+10    5     13    fixed     1.456
+11    9     10    fixed     1.093
+12    9     11    fixed     1.093
+13    9     12    fixed     1.093
+14    13    14    fixed     1.093
+15    13    15    fixed     1.093
+16    13    16    fixed     1.535
+17    16    17    fixed     1.092
+18    16    18    fixed     1.092
+19    16    19    fixed     1.535
+20    19    20    fixed     1.092
+21    19    21    fixed     1.092
+22    19    22    fixed     1.535
+23    22    23    fixed     1.092
+24    22    24    fixed     1.092
+25    22    25    fixed     1.092
+
+!Angle Format
+!index i j k type parameters
+!type="fixed", parms=equilibrium_angle
+!type="harmonic", parms=force_constant equilibrium_angle
+
+# Angle_Info
+45
+1     2     1     5     harmonic   37062.0    109.33
+2     2     1     7     harmonic   25040.0    122.10
+3     5     1     7     harmonic   25040.0    122.10
+4     1     2     3     harmonic   32146.0    128.01
+5     1     2     9     harmonic   31481.0    125.09
+6     3     2     9     harmonic   31481.0    125.09
+7     2     3     6     harmonic   25272.0    119.66
+8     2     3     4     harmonic   36690.0    109.42
+9     6     3     4     harmonic   23747.0    129.11
+10    5     4     8     harmonic   25272.0    119.66
+11    5     4     3     harmonic   36690.0    109.42
+12    8     4     3     harmonic   23747.0    129.11
+13    1     5     4     harmonic   34692.0    109.90
+14    1     5     13    harmonic   31481.0    125.09
+15    4     5     13    harmonic   31481.0    125.09
+16    10    9     11    harmonic   19716.0    109.55
+17    10    9     12    harmonic   19716.0    109.55
+18    10    9     2     harmonic   25111.0    109.45
+19    11    9     12    harmonic   19716.0    109.55
+20    11    9     2     harmonic   25111.0    109.45
+21    12    9     2     harmonic   25111.0    109.45
+22    14    13    15    harmonic   19716.0    109.55
+23    14    13    5     harmonic   25111.0    109.45
+24    14    13    16    harmonic   23329.0    110.07
+25    15    13    5     harmonic   25111.0    109.45
+26    15    13    16    harmonic   23329.0    110.07
+27    5     13    16    harmonic   33077.0    112.81
+28    17    16    18    harmonic   19842.0    108.35
+29    17    16    13    harmonic   23334.0    110.05
+30    17    16    19    harmonic   23334.0    110.05
+31    18    16    13    harmonic   23334.0    110.05
+32    18    16    19    harmonic   23334.0    110.05
+33    13    16    19    harmonic   31808.0    110.63
+34    20    19    21    harmonic   19842.0    108.35
+35    20    19    16    harmonic   23334.0    110.05
+36    20    19    22    harmonic   23334.0    110.05
+37    21    19    16    harmonic   23334.0    110.05
+38    21    19    22    harmonic   23334.0    110.05
+39    16    19    22    harmonic   31808.0    110.63
+40    23    22    24    harmonic   19842.0    108.35
+41    23    22    25    harmonic   19842.0    108.35
+42    23    22    19    harmonic   23334.0    110.05
+43    24    22    25    harmonic   19842.0    108.35
+44    24    22    19    harmonic   23334.0    110.05
+45    25    22    19    harmonic   23334.0    110.05
+
+!Dihedral Format
+!index i j k l type parameters
+!type="none"
+!type="CHARMM", parms=a0 a1 delta
+!type="OPLS", parms=c0 c1 c2 c3
+!type="harmonic", parms=force_constant equilibrium_dihedral
+
+# Dihedral_Info
+91
+1     1     2     3     6     CHARMM       7.11       2.0     180.0
+2     1     2     3     4     CHARMM       7.11       2.0     180.0
+3     1     2     9     10    CHARMM      0.10       1.0     0.0
+4     1     2     9     10    CHARMM      0.23       2.0     180.0
+5     1     2     9     10    CHARMM      0.73       3.0     0.0
+6     1     2     9     10    CHARMM      -0.15      4.0     180.0
+7     1     2     9     11    CHARMM      0.10       1.0     0.0
+8     1     2     9     11    CHARMM      0.23       2.0     180.0
+9     1     2     9     11    CHARMM      0.73       3.0     0.0
+10     1     2     9     11    CHARMM      -0.15      4.0     180.0
+11    1     2     9     12    CHARMM      0.10       1.0     0.0
+12    1     2     9     12    CHARMM      0.23       2.0     180.0
+13    1     2     9     12    CHARMM      0.73       3.0     0.0
+14    1     2     9     12    CHARMM      -0.15      4.0     180.0
+15    1     5     4     8     CHARMM       7.11       2.0     180.0
+16    1     5     4     3     CHARMM       7.11       2.0     180.0
+17    1     5     13    14    CHARMM      0.10       1.0     0.0
+18    1     5     13    14    CHARMM      0.23       2.0     180.0
+19    1     5     13    14    CHARMM      0.73       3.0     0.0
+20    1     5     13    14    CHARMM      -0.15      4.0     180.0
+21    1     5     13    15    CHARMM      0.10       1.0     0.0
+22    1     5     13    15    CHARMM      0.23       2.0     180.0
+23    1     5     13    15    CHARMM      0.73       3.0     0.0
+24    1     5     13    15    CHARMM      -0.15      4.0     180.0
+25    1     5     13    16    CHARMM      0.47       2.0     180.0
+26    1     5     13    16    CHARMM      0.76       3.0     0.0
+27    1     5     13    16    CHARMM      -0.33      4.0     180.0
+28    2     1     5     4     CHARMM       7.11       2.0     180.0
+29    2     1     5     13    CHARMM       7.11       2.0     180.0
+30    2     3     4     5     CHARMM      16.74       2.0     180.0
+31    2     3     4     8     CHARMM      16.74       2.0     180.0
+32    3     2     1     5     CHARMM       7.11       2.0     180.0
+33    3     2     1     7     CHARMM       7.11       2.0     180.0
+34    3     2     9     10    CHARMM       0.72       3.0       0.0
+35    3     2     9     11    CHARMM       0.72       3.0       0.0
+36    3     2     9     12    CHARMM       0.72       3.0       0.0
+37    3     4     5     13    CHARMM       7.11       2.0     180.0
+38    4     5     1     7     CHARMM       7.11       2.0     180.0
+39    4     5     13    14    CHARMM      0.10       1.0       0.0
+40    4     5     13    14    CHARMM      0.23       2.0       180.0
+41    4     5     13    14    CHARMM      0.73       3.0       0.0
+42    4     5     13    14    CHARMM      -0.15      4.0       180.0
+43    4     5     13    15    CHARMM      0.10       1.0       0.0
+44    4     5     13    15    CHARMM      0.23       2.0       180.0
+45    4     5     13    15    CHARMM      0.73       3.0       0.0
+46    4     5     13    15    CHARMM      -0.15      4.0       180.0
+47    4     5     13    16    CHARMM      0.47       2.0       180.0
+48    4     5     13    16    CHARMM      0.76       3.0       0.0
+49    4     5     13    16    CHARMM      -0.33      4.0       180.0
+50    4     3     2     9     CHARMM       7.11       2.0     180.0
+51    5     1     2     9     CHARMM       7.11       2.0     180.0
+52    5     4     3     6     CHARMM      16.74       2.0     180.0
+53    5     13    16    17    CHARMM       0.65       3.0       0.0
+54    5     13    16    18    CHARMM       0.65       3.0       0.0
+55    5     13    16    19    CHARMM       0.65       3.0     180.0
+56    6     3     2     9     CHARMM       7.11       2.0     180.0
+57    6     3     4     8     CHARMM      16.74       2.0     180.0
+58    7     1     2     9     CHARMM       7.11       2.0     180.0
+59    7     1     5     13    CHARMM       7.11       2.0     180.0
+60    8     4     5     13    CHARMM       7.11       2.0     180.0
+61    13    16    19    20    CHARMM       0.67       3.0       0.0
+62    13    16    19    21    CHARMM       0.67       3.0       0.0
+63    13    16    19    22    CHARMM       0.75       3.0      0.0
+64    13    16    19    22    CHARMM       1.05       2.0      180.0
+65    13    16    19    22    CHARMM       0.84       1.0      180.0
+66    14    13    16    17    CHARMM       0.65       3.0       0.0
+67    14    13    16    18    CHARMM       0.65       3.0       0.0
+68    14    13    16    19    CHARMM       0.65       3.0       0.0
+69    15    13    16    17    CHARMM       0.65       3.0       0.0
+70    15    13    16    18    CHARMM       0.65       3.0       0.0
+71    15    13    16    19    CHARMM       0.65       3.0       0.0
+72    16    19    22    23    CHARMM       0.67       3.0       0.0
+73    16    19    22    24    CHARMM       0.67       3.0       0.0
+74    16    19    22    25    CHARMM       0.67       3.0       0.0
+75    17    16    19    20    CHARMM       0.63       3.0       0.0
+76    17    16    19    21    CHARMM       0.63       3.0       0.0
+77    17    16    19    22    CHARMM       0.67       3.0       0.0
+78    18    16    19    20    CHARMM       0.63       3.0       0.0
+79    18    16    19    21    CHARMM       0.63       3.0       0.0
+80    18    16    19    22    CHARMM       0.67       3.0       0.0
+81    20    19    22    23    CHARMM       0.63       3.0       0.0
+82    20    19    22    24    CHARMM       0.63       3.0       0.0
+83    20    19    22    25    CHARMM       0.63       3.0       0.0
+84    21    19    22    23    CHARMM       0.63       3.0       0.0
+85    21    19    22    24    CHARMM       0.63       3.0       0.0
+86    21    19    22    25    CHARMM       0.63       3.0       0.0
+87    3     8     4     5     CHARMM       4.60        2.0       180.0
+88    4     6     3     2     CHARMM       4.60        2.0       180.0
+89    7     5     1     2     CHARMM       4.60        2.0       180.0
+90    13    1     5     4     CHARMM       4.60        2.0       180.0
+91    9     1     2     3     CHARMM       4.60        2.0       180.0
+
+# Improper_Info
+0
+
+!Intra Scaling
+!vdw_scaling    1-2 1-3 1-4 1-N
+!charge_scaling 1-2 1-3 1-4 1-N
+
+# Intra_Scaling
+0. 0. 0.5000 1.
+0. 0. 0.8333 1.
+
+!Fragment Format
+!index number_of_atoms_in_fragment branch_point other_atoms
+
+# Fragment_Info
+6
+1    10    5    1    2    3    4    13    7    9    6    8
+2    5    9    10    11    12    2
+3    5    13    14    15    5    16
+4    5    16    17    18    13    19
+5    5    19    20    21    16    22
+6    5    22    23    24    25    19
+
+
+# Fragment_Connectivity
+5
+1    1    3
+2    1    2
+3    3    4
+4    4    5
+5    5    6
+
+
+END

@@ -1,0 +1,154 @@
+# Run_Name
+gemc_1bar_0percentHFC_298.out
+!------------------------------------------------------------------------------
+
+# Sim_Type
+gemc_npt
+!------------------------------------------------------------------------------
+
+# Nbr_Species
+3
+!------------------------------------------------------------------------------
+
+# VDW_Style
+lj cut_tail 12.0
+lj cut_tail 50.0
+!------------------------------------------------------------------------------
+
+# Rcutoff_Low
+1.0
+!------------------------------------------------------------------------------
+
+# Charge_Style
+coul ewald 12.0 0.00001
+coul ewald 50.0 0.00001 
+!------------------------------------------------------------------------------
+
+# Molecule_Files
+bmim.mcf   300
+pf6.mcf   300
+R32.mcf   300
+!----------------------------------------------------------one line per species
+
+# Box_Info
+2
+cubic
+47.69
+
+cubic
+235.0
+!-------------------------------------------------------line 1: number of boxes
+!--------------------------------------------------------------line 2: box type
+!--------------------------------------------------------------line 3: box size
+!--------------------------------------------------------------repeat for second box
+
+# Temperature_Info
+298.15
+298.15 
+!----------------------------------------------------------one temperature per box
+
+# Pressure_Info
+1.0
+1.0
+!------------------------------------------------------------------------------
+
+# Seed_Info
+1005000  240002500
+!------------------------------------------------------------------------------
+
+# Move_Probability_Info
+
+# Prob_Translation
+0.35
+0.5 0.5 0.5
+0.0 0.0 0.5
+
+# Prob_Rotation
+0.35
+180.0 180.0 180.0
+0.0 0.0 180.0
+
+# Prob_Regrowth
+0.2
+0.33 0.33 0.34
+
+# Prob_Volume
+0.0025
+200.0
+1000.0
+
+# Prob_Swap
+0.0975
+none none cbmc
+
+# Done_Probability_Info
+
+!---------------------one line for each box and one entry/line for each species
+!-----------------------------------------each molecule moves per volume change
+
+# CBMC_Info
+kappa_ins 12
+kappa_dih 12
+rcut_cbmc 6.5 6.5
+!------------------------------------------------------------------------------
+
+# Start_Type
+read_config 300 300 0 npt_0percentHFC_bmimPF6_298_1bar_R2.out.xyz
+make_config 0 0 300
+!--------make_config: one line for each species and one entry/line for each box
+!------------------------------------------------------------read_old: filename
+!----------------------------------------------------------checkpoint: filename
+
+
+# Run_Type
+equilibration 900 50
+!-------------------------Equilibration: update maximum widths every 100 steps/update maximum
+!-------------------------volume displacement every 100 steps
+
+
+# Average_Info ( 0 == yes, 1 = No)
+1
+
+!------------------------------------------------------------ 0 == yes, 1 == no
+
+# Simulation_Length_Info
+units       sweeps
+steps_per_sweep 900
+prop_freq   50
+coord_freq  900
+run         350000
+!------------------ simulation length every 2200 steps, XYZ output every 2200 steps, property
+!---------------------------------------output every 100 steps
+
+# Property_Info 1 
+energy_total
+density
+nmols
+volume
+pressure
+!------------------------------------------------------------------------------
+
+# Property_Info 2
+energy_total
+density
+nmols
+volume
+pressure
+!-------------------------------------------------------------------------------
+
+# Fragment_Files
+species1/frag1/frag1.dat  1
+species1/frag2/frag2.dat  2
+species1/frag3/frag3.dat  3
+species1/frag4/frag4.dat  4
+species1/frag5/frag5.dat  5
+species1/frag6/frag6.dat  6
+species2/frag1/frag1.dat  7
+species3/frag1/frag1.dat  8
+!---------------------------------------------------------one line per fragment
+
+# Pair_Energy
+true
+!------------------------------------------------------------------------------
+
+END
