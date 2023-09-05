@@ -13,3 +13,5 @@
  7. In mu_p/ folder, "python compute_mu_vap.py" to get chemical potential in vapor phase from REFPROP data HFC32_PR_fugV_298.csv
  8. In final/ foler, prepare HFC32_muV_298K.csv, mu_liq.txt, and press_conc_expt.txt (from experiments) and run "python plot_sol.py" to get final result.
  
+DOI: https://doi.org/10.1021/acs.jctc.3c00206
+Citation: Ning Wang, Ryan S. DeFever, Edward J. Maginn*, “Alchemical Free Energy and Hamiltonian Replica Exchange Molecular Dynamics to Compute Hydrofluorocarbon Isotherms in Imidazolium-Based Ionic Liquids”, J. Chem. Theory Comput., 2023, 19, 11, 3324–3335
